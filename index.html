@@ -3,102 +3,197 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AnimeSketch PK | Custom Anime Art</title>
-  <meta name="description" content="Turn your photo into a custom anime sketch with AnimeSketch PK.">
+  <meta name="description" content="Discover custom anime sketches at AnimeSketch PK.">
+  <title>AnimeSketch PK | Custom Anime Sketches</title>
+
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #0b0b12;
-      color: #fff;
+      color: #ffffff;
     }
+
     header {
-      padding: 22px 8%;
+      padding: 20px 7%;
+      background: #141420;
+      border-bottom: 1px solid #29253e;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #141420;
-      border-bottom: 1px solid #29253e;
+      flex-wrap: wrap;
+      gap: 12px;
     }
-    .logo { font-size: 23px; font-weight: bold; }
-    .logo span { color: #a78bfa; }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .logo span,
+    h1 span {
+      color: #a78bfa;
+    }
+
+    nav a {
+      color: #ddd6fe;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
     .hero {
-      max-width: 1000px;
+      max-width: 950px;
       margin: auto;
-      padding: 75px 20px;
+      padding: 65px 20px 45px;
       text-align: center;
     }
+
     .tag {
       color: #c4b5fd;
-      letter-spacing: 2px;
       font-size: 12px;
+      letter-spacing: 2px;
       text-transform: uppercase;
     }
+
     h1 {
-      font-size: clamp(36px, 7vw, 62px);
-      line-height: 1.12;
+      font-size: clamp(36px, 7vw, 60px);
+      line-height: 1.15;
       margin: 20px 0;
     }
-    h1 span { color: #a78bfa; }
+
     .intro {
+      max-width: 600px;
+      margin: auto;
       color: #c4c4d4;
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.8;
-      max-width: 620px;
-      margin: 0 auto;
     }
+
     .art {
       max-width: 330px;
-      min-height: 220px;
-      margin: 35px auto;
+      margin: 32px auto;
+      padding: 30px 15px;
       border: 1px solid #484064;
       border-radius: 20px;
       background: linear-gradient(145deg, #242039, #12121c);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 25px;
     }
-    .art-icon { font-size: 76px; }
-    .art p { color: #d8d0f7; }
+
+    .art-icon {
+      font-size: 72px;
+      margin-bottom: 15px;
+    }
+
+    .art p {
+      color: #d8d0f7;
+    }
+
     .price-card {
       display: inline-block;
-      padding: 20px 32px;
-      border-radius: 16px;
       background: #191727;
       border: 1px solid #66518f;
-      margin: 10px 0 25px;
+      border-radius: 15px;
+      padding: 20px 30px;
+      margin: 5px 0 25px;
     }
-    .price { font-size: 32px; font-weight: bold; }
-    .price-note { color: #bcb8ca; font-size: 13px; margin-top: 8px; }
+
+    .price {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .price-note {
+      color: #bcb8ca;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
     .button {
       display: inline-block;
       background: #a78bfa;
       color: #100d1c;
-      padding: 15px 28px;
-      text-decoration: none;
+      padding: 14px 22px;
       border-radius: 10px;
+      text-decoration: none;
       font-weight: bold;
+      margin: 5px;
     }
-    .button:hover { background: #c4b5fd; }
+
+    .button:hover {
+      background: #c4b5fd;
+    }
+
+    .button-outline {
+      background: transparent;
+      color: #ddd6fe;
+      border: 1px solid #a78bfa;
+    }
+
     .details {
-      max-width: 850px;
+      max-width: 900px;
       margin: auto;
-      padding: 20px 20px 65px;
+      padding: 20px 20px 55px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 16px;
     }
+
     .item {
       background: #151521;
       border: 1px solid #29253e;
       border-radius: 14px;
       padding: 23px;
     }
-    .item h3 { color: #c4b5fd; }
-    .item p { color: #c4c4d4; line-height: 1.6; }
+
+    .item h3 {
+      color: #c4b5fd;
+    }
+
+    .item p {
+      color: #c4c4d4;
+      line-height: 1.7;
+    }
+
+    .support {
+      max-width: 650px;
+      margin: 0 auto 60px;
+      padding: 30px 20px;
+      text-align: center;
+      background: #151521;
+      border: 1px solid #29253e;
+      border-radius: 16px;
+    }
+
+    .support h2 {
+      color: #c4b5fd;
+    }
+
+    .support p {
+      color: #c4c4d4;
+      line-height: 1.7;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      color: #ddd6fe;
+      background: #242039;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
     footer {
       text-align: center;
       padding: 25px;
@@ -106,48 +201,89 @@
       border-top: 1px solid #29253e;
       font-size: 13px;
     }
+
+    @media (max-width: 500px) {
+      header {
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="logo">✏️ AnimeSketch <span>PK</span></div>
+
+    <nav>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#support">Customer Support</a>
+    </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="tag">Your photo, your anime art</div>
+      <div class="tag">Your Photo, Your Anime Art</div>
+
       <h1>Turn Your Photo Into <span>Anime Art</span></h1>
+
       <p class="intro">
         Make your favourite photo special with a custom anime sketch,
-        created just for you.
+        created especially for you.
       </p>
 
       <div class="art">
         <div class="art-icon">🎨</div>
         <strong>Your Photo → Anime Sketch</strong>
-        <p>Made specially for you</p>
+        <p>Custom artwork made for you</p>
       </div>
 
       <div class="price-card">
         <div class="price">Rs. 6,000</div>
         <div class="price-note">Price per custom anime sketch</div>
       </div>
+
       <br>
-      <a class="button" href="#how-it-works">See How It Works ↓</a>
+
+      <a class="button" href="#how-it-works">
+        How It Works ↓
+      </a>
+
+      <a class="button button-outline" href="#support">
+        Need Help?
+      </a>
     </section>
 
     <section class="details" id="how-it-works">
       <div class="item">
         <h3>01. Check the Price</h3>
-        <p>Review the price before deciding to order.</p>
+        <p>See the price before deciding to order your custom sketch.</p>
       </div>
+
       <div class="item">
-        <h3>02. Send Your Photo</h3>
-        <p>Submit your image and order details when ordering is available.</p>
+        <h3>02. Discuss Your Order</h3>
+        <p>Contact options will be added here when they are ready.</p>
       </div>
+
       <div class="item">
         <h3>03. Custom Artwork</h3>
         <p>Your sketch will be created according to the agreed details.</p>
+      </div>
+    </section>
+
+    <section class="support" id="support">
+      <h2>Need Help With Your Order?</h2>
+
+      <p>
+        Have a question or an issue? Our customer support contact
+        option will be available here soon.
+      </p>
+
+      <div class="coming-soon">
+        Customer Support — Coming Soon
       </div>
     </section>
   </main>
